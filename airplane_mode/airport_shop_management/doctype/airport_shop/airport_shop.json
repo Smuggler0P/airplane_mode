@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{airport}-{###}",
+ "creation": "2025-02-13 12:01:50.049527",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airport",
+  "area_sq_ft",
+  "column_break_onko",
+  "shop_number",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number"
+  },
+  {
+   "fieldname": "area_sq_ft",
+   "fieldtype": "Float",
+   "label": "Area (sq ft)"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nAvailable\nOccupied"
+  },
+  {
+   "fieldname": "column_break_onko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Airport",
+   "options": "Airport"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-19 18:12:01.795384",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Airport Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

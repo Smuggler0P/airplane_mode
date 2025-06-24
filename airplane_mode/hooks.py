@@ -5,6 +5,15 @@ app_description = "Airplane Mode"
 app_email = "avi.mathur@praxontech.com"
 app_license = "mit"
 
+# # hooks.py
+# doc_events = {
+#     "Airplane Ticket": {
+#         "before_submit": "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.AirplaneTicket.before_submit"
+#     }
+# }
+
+
+
 # Apps
 # ------------------
 
@@ -136,7 +145,13 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
+doc_events = {
+	"Airplane Flight": {
+		"on_update": "airplane_mode.airplane_mode.doctype.airplane_flight.airplane_flight.sync_gate_number",
+		# "on_cancel": "method",
+		# "on_trash": "method"
+	}
+}
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
@@ -146,7 +161,15 @@ app_license = "mit"
 # }
 
 # Scheduled Tasks
+
 # ---------------
+# airplane_mode/hooks.py
+
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.airplane_shop_management.doctype.rent_payment.rent_payment_reminder.send_rent_due_reminder"
+    ]
+}
 
 # scheduler_events = {
 # 	"all": [

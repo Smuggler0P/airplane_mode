@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 16:27:49.938381",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "role",
+  "phone_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "\nPilot\nCo-Pilot\nFlight Attendant"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-12 16:31:14.602494",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Flight Crew Member",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

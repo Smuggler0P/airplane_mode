@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant}-{receipt_number}-{###}",
+ "creation": "2025-02-13 12:15:37.224397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "column_break_bzwv",
+  "status",
+  "contract_details_section",
+  "shop",
+  "tenant",
+  "column_break_dhhn",
+  "shop_name",
+  "airport",
+  "payment_details_section",
+  "due_date",
+  "amount_paid",
+  "column_break_ggqy",
+  "payment_date"
+ ],
+ "fields": [
+  {
+   "fetch_from": "contract.airport_shop_allotted",
+   "fieldname": "shop",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Shop"
+  },
+  {
+   "fetch_from": "contract.party_name",
+   "fieldname": "tenant",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Tenant"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Paid\"",
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "mandatory_depends_on": "eval:doc.status == \"Paid\""
+  },
+  {
+   "fieldname": "column_break_bzwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contract.shop_rent_amount",
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount",
+   "mandatory_depends_on": "eval:doc.contract != null"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "column_break_dhhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Unpaid\nPaid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contract.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Shop Name"
+  },
+  {
+   "fetch_from": "contract.airport",
+   "fieldname": "airport",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Airport"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "column_break_ggqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-31 15:44:02.537466",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Rent Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

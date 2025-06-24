@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{shop_name}-{###}",
+ "creation": "2025-03-19 15:50:51.128540",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_details_section",
+  "party_name",
+  "column_break_dldu",
+  "status",
+  "shop_details_section",
+  "shop_name",
+  "shop_number",
+  "column_break_ixbq",
+  "airport_shop_allotted",
+  "airport",
+  "shop_rent_amount",
+  "contract_period_section",
+  "start_date",
+  "column_break_qfmz",
+  "end_date",
+  "contract_details_section",
+  "contract_terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "party_name.phone_number",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Mobile No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dldu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_period_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Period"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qfmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Long Text",
+   "label": "Contract Terms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Details"
+  },
+  {
+   "fieldname": "shop_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Details"
+  },
+  {
+   "fieldname": "airport_shop_allotted",
+   "fieldtype": "Link",
+   "label": "Airport Shop Allotted",
+   "options": "Airport Shop",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "airport_shop_allotted.shop_number",
+   "fieldname": "shop_number",
+   "fieldtype": "Read Only",
+   "label": "Allotted Shop Number"
+  },
+  {
+   "fieldname": "column_break_ixbq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_rent_amount",
+   "fieldtype": "Currency",
+   "label": "Shop Rent Amount"
+  },
+  {
+   "fetch_from": "airport_shop_allotted.airport",
+   "fieldname": "airport",
+   "fieldtype": "Read Only",
+   "label": "Airport"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-31 13:57:09.286132",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
