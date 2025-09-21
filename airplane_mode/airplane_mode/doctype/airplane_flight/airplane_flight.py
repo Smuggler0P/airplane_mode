@@ -10,3 +10,19 @@ class AirplaneFlight(WebsiteGenerator):
     
     def on_cancel(self):
         self.status = 'Cancelled'
+        
+def sync_gate_number(doc, method):
+	updated_gate_number = doc.gate_number
+
+	# Find all Airplane Ticket documents linked to the flight
+	tickets = frappe.get_all("Airplane Ticket", filters={"flight": doc.name}, fields=["name"])
+
+	for ticket in tickets:
+		# Load the Airplane Ticket document
+		ticket_doc = frappe.get_doc("Airplane Ticket", ticket["name"])
+		
+		# Update the gate_number and save the ticket
+		ticket_doc.gate_number = updated_gate_number
+		ticket_doc.save()
+
+	frappe.msgprint(f"Gate number updated in all linked tickets for flight {doc.name}.")
