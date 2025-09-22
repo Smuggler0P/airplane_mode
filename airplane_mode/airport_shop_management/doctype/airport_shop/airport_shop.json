@@ -7,10 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "airport",
-  "area_sq_ft",
-  "column_break_onko",
   "shop_number",
-  "status"
+  "status",
+  "column_break_onko",
+  "shop_type",
+  "area_sq_ft"
  ],
  "fields": [
   {
@@ -43,11 +44,17 @@
    "in_standard_filter": 1,
    "label": "Airport",
    "options": "Airport"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Link",
+   "label": "Shop Type",
+   "options": "Shop Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-19 18:12:01.795384",
+ "modified": "2025-09-23 01:10:08.094648",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Airport Shop",
@@ -67,6 +74,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

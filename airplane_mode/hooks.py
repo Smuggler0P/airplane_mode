@@ -265,3 +265,11 @@ scheduler_events = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {
+        "doctype": "Shop Type",
+        "filters": {
+            "name": ["in", ["Stall", "Walk-through", "Normal"]]
+        }
+    }
+]

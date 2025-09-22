@@ -6,3 +6,16 @@
 
 // 	},
 // });
+
+
+frappe.ui.form.on('Airport Shop', {
+    refresh: function(frm) {
+        frm.set_query("shop_type", function() {
+            return {
+                filters: {
+                    enabled: 1
+                }
+            };
+        });
+    }
+});
