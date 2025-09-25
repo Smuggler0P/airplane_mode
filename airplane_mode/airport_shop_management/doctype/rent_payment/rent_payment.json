@@ -19,8 +19,8 @@
   "due_date",
   "amount_paid",
   "column_break_ggqy",
-  "payment_date",
   "receipt_number",
+  "payment_date",
   "amended_from"
  ],
  "fields": [
@@ -129,7 +129,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-21 18:47:51.606401",
+ "modified": "2025-09-26 00:02:20.579549",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
