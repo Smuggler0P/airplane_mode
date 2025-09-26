@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"MfJrjqNDzK\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"wjgReJ9Je3\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"Y69eTXXA_v\",\"type\":\"card\",\"data\":{\"card_name\":\"Airplane Details\",\"col\":4}}]",
+ "content": "[{\"id\":\"MfJrjqNDzK\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"wjgReJ9Je3\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"Y69eTXXA_v\",\"type\":\"card\",\"data\":{\"card_name\":\"Airplane Details\",\"col\":4}},{\"id\":\"Jlr8p5_0WZ\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2025-09-21 15:11:04.398376",
  "custom_blocks": [],
  "docstatus": 0,
@@ -100,9 +100,78 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Revenue by Airline",
+   "link_count": 0,
+   "link_to": "Revenue by Airline",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Add-on Popularity",
+   "link_count": 0,
+   "link_to": "Add-on Popularity",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Airport Shops Report",
+   "link_count": 0,
+   "link_to": "Airport Shops Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Total Shops at Each Airport",
+   "link_count": 0,
+   "link_to": "Total Shops at Each Airport",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Occupied Shops",
+   "link_count": 0,
+   "link_to": "Occupied Shops",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Available Shops",
+   "link_count": 0,
+   "link_to": "Available Shops",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-09-21 15:54:13.257053",
+ "modified": "2025-09-26 15:20:56.162053",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "AIrplane Mode",
